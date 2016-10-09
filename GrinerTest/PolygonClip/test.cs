@@ -32,7 +32,12 @@ int test(node *point, node *p)
             Node aux, left, i;
             int type = 0;
             i = new Node();
-
+            /*
+             * Note that this create call uses '0' as the x value. This works fine
+             * as long as all points are in the first quadrant. If you have negative 
+             * points this call should find a point larger or smaller than all
+             * points in the test polygon denoted by 'p'
+             */
             left = create(0, point.y, null,null,null,null , 0, 0, 0, 0);
             for (aux = p; aux.next != null; aux = aux.next)
             {
