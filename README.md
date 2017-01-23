@@ -19,6 +19,7 @@ The directory PolygonClip contains the 2 classes used for the project, and a Win
 
 Hope this solves a problem for you :-)
 
+I used this code in my project for procedural mesh generation at www.meshola.com 
 
 John Mott
 johnkmott@gmail.com
