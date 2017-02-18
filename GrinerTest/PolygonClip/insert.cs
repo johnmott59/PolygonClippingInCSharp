@@ -28,8 +28,15 @@ namespace GrienerTest
             while (aux != last && aux.alpha < ins.alpha) aux = aux.next;
             ins.next = aux;
             ins.prev = aux.prev;
-            ins.prev.next = ins;
-            ins.next.prev = ins;
+            /*
+             * Feb 2017. Check against null pointer
+             */
+             if (ins.prev != null) {
+                ins.prev.next = ins;
+             }
+             if (ins.next != null) {
+                ins.next.prev = ins;
+             }    
         }
 
 
